@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --gray1: #333333;
+  --gray2: #555555;
+  --gray3: #cccccc;
+  --gray4: #aaaaaa;
+
+  --black: #080808;
+
+  /* Primary Color : 60% */
+  --white: #ffffff;
+  --retro: #f6f5e4;
+  --orange: #f2a01f;
+  /* Secondary Color : 30% */
+  --green: #164a53;
+  /* Accent Color : 10% */
+  --red: #f05023;
+  --blue: #3ebdd8;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2em;
+  color: var(--gray1);
+}
