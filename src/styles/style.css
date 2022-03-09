@@ -81,6 +81,12 @@ section {
   overflow: hidden;
 }
 
+section h1 {
+  text-align: center;
+  display: block;
+  margin-bottom: 5rem;
+}
+
 .btn {
   padding: 1.4rem 3.4rem;
   font-size: 1.1rem;
@@ -172,6 +178,34 @@ section.main .pic-container .pic {
 }
 
 /* ABOUT */
+section.about {
+  background: var(--primary--color--white);
+}
+
+section.about .container {
+  display: grid;
+  grid-template-columns: 26rem auto;
+  gap: 5rem;
+}
+
+section.about p {
+  margin-bottom: 1rem;
+}
+
+section.about .container .more-info {
+  display: none;
+}
+
+section.about .container .read-more {
+  display: block;
+  margin: 1rem 0 2rem;
+  /* color: primary color */
+  cursor: pointer;
+}
+
+section.about .container .read-more:hover {
+  text-decoration: underline;
+}
 
 /* CONTACT */
 section.contact {
