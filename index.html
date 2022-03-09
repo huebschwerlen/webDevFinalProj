@@ -12,24 +12,22 @@
 
     <!-- NAV BAR -->
     <nav>
-        <div class="nav-container">
+        <div class="container">
             <ul>
-                <li><a href="">Main</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Resume</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#main">Main</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- MAIN -->
-    <section class="main">
-        <div class="main-container">
-            <div class="pic-container"></div>
-            <div class="pic">
-                <img src="./src/images/samRough.jpg" alt="Headshot of Sam Huebschwerlen Smiling">
-            </div>
+    <section class="main" id="main">
+
+        <div class="container">
+
             <div class="intro">
                 <h1>Hello! My Name is Sam :)</h1>
                 <h4>I am a Computer Science Grad Student Focused
@@ -37,20 +35,49 @@
                     FullStack Web Development, & CyberSecurity.
                 </h4>
             </div>
+
+            <div class="pic-container">
+                <div class="pic">
+                    <img src="./src/images/samRough.jpg" alt="Headshot of Sam Huebschwerlen Smiling">
+                </div>
+            </div>
+
         </div>
+
     </section>
 
     <!-- ABOUT -->
-    <section class="about"> </section>
+    <section class="about" id="about"> </section>
 
     <!-- RESUME -->
-    <section class="resume"></section>
+    <section class="resume" id="resume"></section>
 
     <!-- PROJECTS -->
-    <section class="projects"></section>
+    <section class="projects" id="projects"></section>
 
     <!-- CONTACT -->
-    <section class="contact"></section>
+    <section class="contact" id="contact">
+
+        <div class="background">
+            <div class="container">
+                <h1>I'd Love To Hear From You!</h1>
+                <p>
+                    If you're looking for a motivated software engineer,
+                    or you just want to shoot the breeze fill out the form
+                    below and I will get back to you as soon as possible!
+                </p>
+                <form action="">
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <input type="text" name="Subject" placeholder="Subject" required>
+                    <textarea name="Message" id="" placeholder="Message" required></textarea>
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+
+
+    </section>
 </body>
 
 </html>

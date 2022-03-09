@@ -39,6 +39,11 @@ img {
   width: 100%;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* NAV */
 nav {
   background-color: var(--primary--color--orange);
@@ -50,7 +55,7 @@ nav {
   z-index: 2;
 }
 
-.nav-container {
+nav.container {
   display: flex;
   height: 100%;
   align-items: center;
@@ -90,9 +95,7 @@ section {
   place-items: center;
 }
 
-.main-container {
-  width: 80%;
-  margin: 0 auto;
+.main .container {
   display: grid;
   grid-template-columns: 30rem 30rem;
   gap: 2rem;
@@ -107,18 +110,82 @@ section {
   margin: 2.4rem 0 1rem;
 }
 
+.pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pic {
   position: absolute;
   width: 20rem;
   height: 20rem;
   border-radius: 1%;
-  /* overflow: hidden; */
 }
 
-.pic-container {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* CONTACT */
+section.contact {
+  padding: 0;
+  max-width: 100vw;
+}
+
+section.contact .background {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10rem 0 7rem;
+}
+
+section.contact .container {
+  width: 40%;
+}
+
+section.contact .container h1 {
+  margin: 0;
+  color: var(--primary--color--white);
+}
+
+section.contact .container p {
+  text-align: center;
+  color: var(--primary--color--white);
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+section.contact form {
+  margin-top: 3rem;
+}
+
+section.contact form input,
+section.contact form textarea {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1.6rem;
+  border: 1px solid var(--primary--color--white);
+  background: transparent;
+  color: var(--primary--color--retro);
+}
+
+section.contact form textarea {
+  height: 10rem;
+}
+
+section.contact form input::placeholder,
+section.contact form textarea::placeholder {
+  color: var(--primary--color--retro);
+}
+
+section.contact form .btn {
+  width: 14rem;
+  border: none;
+  background: var(--primary--color--orange);
+  color: var(--primary--color--retro);
+  margin: 2rem auto 0;
+}
+
+section.contact form .btn:hover {
+  background: var(--primary--color--retro);
+  cursor: pointer;
+  color: var(--secondary--color--green);
 }
