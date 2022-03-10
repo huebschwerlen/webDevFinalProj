@@ -196,6 +196,10 @@ section.about .container .more-info {
   display: none;
 }
 
+section.about .container .more-info.show-content {
+  display: block;
+}
+
 section.about .container .read-more {
   display: block;
   margin: 1rem 0 2rem;
@@ -205,6 +209,42 @@ section.about .container .read-more {
 
 section.about .container .read-more:hover {
   text-decoration: underline;
+}
+
+/* PROJECTS */
+section.projects {
+  /* background: color???; */
+}
+
+section.projects .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+section.projects .container .project {
+  background: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  cursor: default;
+  transition: all 800ms ease;
+}
+
+section.projects .container .project:hover {
+  box-shadow: 0 3rem 3rem lightblue;
+}
+
+section.projects .container .project img {
+  width: 15rem;
+  height: 10rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--secondary--color--green);
 }
 
 /* CONTACT */
@@ -273,4 +313,31 @@ section.contact form .btn:hover {
   background: var(--primary--color--retro);
   cursor: pointer;
   color: var(--secondary--color--green);
+}
+
+/* MEDIA QUERIES */
+
+/* PHONE */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* NAV */
+  /* collapsible? */
+  /* find hamburger icon */
+
+  /* #MAIN / ABOUT */
+
+  /* #ABOUT / EXPERIENCE */
+
+  /* PROJECTS */
+
+  /* CONTACT */
 }
