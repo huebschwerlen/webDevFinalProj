@@ -20,7 +20,7 @@
   /* Primary Color : 60% */
   --primary--color--white: #ffffff;
   --primary--color--retro: #f6f5e4;
-  --primary--color--orange: #f2a01f;
+  --primary--color--orange: #080808;
 
   /* Secondary Color : 30% */
   --secondary--color--green: #164a53;
@@ -58,7 +58,6 @@ h3 {
 
 h1 {
   font-size: 3.8rem;
-  color: var(--accent--color--blue);
 }
 
 h2 {
@@ -67,7 +66,6 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-  color: var(--accent--color--blue);
 }
 
 p {
@@ -137,13 +135,13 @@ nav .container ul li a {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: var(--primary--color--retro);
+  color: var(--primary--color--white);
   width: 8rem;
   transition: var(--transition);
 }
 
 nav .container ul li a:hover {
-  color: var(--secondary--color--green);
+  color: var(--accent--color--blue);
 }
 
 nav .container ul li a.active {
@@ -156,7 +154,7 @@ nav button {
 }
 
 nav h3 {
-  color: var(--primary--color--retro);
+  color: var(--primary--color--white);
 }
 
 /* Main */
@@ -227,7 +225,7 @@ section.about .container .more-info.show-content {
 section.about .container .read-more {
   display: block;
   margin: 1rem 0 2rem;
-  color: var(--accent--color--blue);
+  color: var(--secondary--color--green);
   cursor: pointer;
 }
 
@@ -293,18 +291,22 @@ section.contact .container {
 
 section.contact .container h1 {
   margin: 0;
-  color: var(--primary--color--retro);
+  color: var(--primary--color--white);
 }
 
 section.contact .container p {
   text-align: center;
   margin-top: 0.5rem;
-  color: var(--primary--color--retro);
+  color: var(--primary--color--white);
   opacity: 0.9;
 }
 
 section.contact form {
   margin-top: 3rem;
+}
+
+section.contact form label {
+  color: var(--white);
 }
 
 section.contact form input,
@@ -315,7 +317,7 @@ section.contact form textarea {
   padding: 1.6rem;
   border: 1px solid var(--primary--color--retro);
   background: transparent;
-  color: var(--primary--color--retro);
+  color: var(--primary--color--white);
 }
 
 section.contact form textarea {
@@ -330,21 +332,21 @@ section.contact form textarea:focus {
 
 section.contact form input::placeholder,
 section.contact form textarea::placeholder {
-  color: var(--primary--color--retro);
+  color: var(--primary--color--white);
 }
 
 section.contact form .btn {
   width: 14rem;
   border: none;
-  background: var(--primary--color--orange);
-  color: var(--primary--color--retro);
+  background: var(--primary--color--retro);
+  color: var(--secondary--color--green);
   margin: 2rem auto 0;
 }
 
 section.contact form .btn:hover {
-  background: var(--primary--color--retro);
+  background: var(--accent--color--blue);
   cursor: pointer;
-  color: var(--secondary--color--green);
+  color: var(--primary--color--retro);
 }
 
 /* FOOTER */
@@ -355,7 +357,7 @@ footer {
 
 footer .copyright {
   background: var(--primary--color--orange);
-  color: var(--primary--color--retro);
+  color: var(--primary--color--white);
   text-align: center;
   margin-top: 5rem;
   padding: 2rem 0;
@@ -397,7 +399,7 @@ footer .copyright {
     z-index: 3;
     width: 16rem;
     height: 100vh;
-    background: var(--accent--color--blue);
+    background: var(--black);
     display: none;
   }
 
@@ -420,7 +422,7 @@ footer .copyright {
     display: inline-block;
     cursor: pointer;
     background: transparent;
-    color: var(--secondary--color--green);
+    color: var(--primary--color--retro);
     margin-right: 1rem;
   }
 

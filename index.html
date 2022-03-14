@@ -193,10 +193,14 @@
                     below and I will get back to you as soon as possible!
                 </p>
                 <form name="contact" action="" method="">
-                    <input type="text" name="Name" placeholder="Name" required>
-                    <input type="email" name="Email" placeholder="Email" required>
-                    <input type="text" name="Subject" placeholder="Subject" required>
-                    <textarea name="Message" placeholder="Message" required></textarea>
+                    <label for="name">Name</label>
+                    <input type="text" name="Name" placeholder="Name" id="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="Email" placeholder="Email" id="email" required>
+                    <label for="subject">Subject</label>
+                    <input type="text" name="Subject" placeholder="Subject" id="subject" required>
+                    <label for="message">Message</label>
+                    <textarea name="Message" placeholder="Message" id="message" required></textarea>
                     <input type="submit" value="Submit" class="btn btn-primary">
                 </form>
             </div>
