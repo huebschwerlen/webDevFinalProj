@@ -45,7 +45,8 @@ body {
 }
 
 .container {
-  width: 80%;
+  /* width: 80%; */
+  width: 94%;
   margin: 0 auto;
 }
 
@@ -159,7 +160,7 @@ nav button {
 }
 
 nav h3 {
-  color: var(--primary--color--orange);
+  color: var(--primary--color--retro);
 }
 
 /* Main */
@@ -382,7 +383,7 @@ footer .copyright {
     font-size: 1.2rem;
   }
 
-  /* NAV */
+  /* NAV  MEDIA QUERIES*/
   nav {
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
   }
@@ -395,15 +396,16 @@ footer .copyright {
     width: 100%;
   }
 
-  nav ul {
+  nav .container ul {
     position: fixed;
     top: 0;
     flex-direction: column;
     z-index: 3;
     width: 16rem;
     height: 100vh;
-    background: var(--primary--color--retro);
+    background: var(--accent--color--blue);
     box-shadow: 1rem 0 2rem var(--primary--color--orange);
+    display: none;
   }
 
   nav ul li {
@@ -412,7 +414,7 @@ footer .copyright {
   }
 
   nav .container ul li a {
-    width: 100;
+    width: 100%;
     justify-content: start;
     padding-left: 2rem;
   }
@@ -426,14 +428,78 @@ footer .copyright {
     cursor: pointer;
     background: transparent;
     color: var(--secondary--color--green);
-    margin: 1rem;
+    margin-right: 1rem;
   }
 
-  /* #MAIN / ABOUT */
+  nav button#close-btn {
+    display: none;
+  }
 
-  /* #ABOUT / EXPERIENCE */
+  /* #MAIN / ABOUT  MEDIA QUERIES*/
+  section.main {
+    margin-top: -4rem;
+    padding-bottom: 7rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
 
-  /* PROJECTS */
+  section.main .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 50%;
+    text-align: center;
+    row-gap: 6rem;
+  }
 
-  /* CONTACT */
+  section.main .container .intro {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  section.main .container .intro h1 {
+    text-align: center;
+  }
+
+  section.main .container .intro p {
+    margin: 0 auto;
+    width: 92%;
+  }
+
+  section.main .container .pic-container {
+    grid-row: 1;
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  section.main .container .pic {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  /* EXPERIENCE MEDIA QUERIES*/
+  section.about .container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  /* PROJECTS MEDIA QUERIES*/
+  section.projects .container {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT MEDIA QUERIES*/
+  section.contact .container {
+    width: 94vw;
+  }
+
+  section.contact .container p {
+    width: 80vw;
+    margin: 0.5rem auto 0;
+  }
+
+  /* FOOTER MEDIA QUERIES*/
+  footer .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
