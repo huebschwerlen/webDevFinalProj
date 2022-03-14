@@ -21,8 +21,10 @@
   --primary--color--white: #ffffff;
   --primary--color--retro: #f6f5e4;
   --primary--color--orange: #f2a01f;
+
   /* Secondary Color : 30% */
   --secondary--color--green: #164a53;
+
   /* Accent Color : 10% */
   --accent--color--red: #f05023;
   --accent--color--blue: #3ebdd8;
@@ -38,14 +40,12 @@ html {
 
 body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* font-size: 1.2em; */
   color: var(--secondary--color--green);
   background: var(--primary--color--retro);
   max-width: 100vw;
 }
 
 .container {
-  /* width: 80%; */
   width: 94%;
   margin: 0 auto;
 }
@@ -53,7 +53,6 @@ body {
 h1,
 h2,
 h3 {
-  /* color: */
   line-height: 1.2;
 }
 
@@ -97,11 +96,6 @@ section h1 {
   color: var(--secondary--color--green);
   background-color: var(--primary--color--retro);
   transition: var(--transition);
-}
-
-.btn:hover {
-  /* color light, low transparency */
-  box-shadow: 0 2rem 2rem var(--primary--color--orange);
 }
 
 .btn-primary {
@@ -174,7 +168,6 @@ section.main {
 
 section.main .container {
   display: grid;
-  /* grid-template-columns: 30rem 30rem; */
   grid-template-columns: auto 30rem;
   gap: 3rem;
 }
@@ -199,7 +192,6 @@ section.main .pic-container {
 }
 
 section.main .pic-container .pic {
-  /* postion may not be correct or neccesary */
   position: absolute;
   width: 20rem;
   height: 20rem;
@@ -242,14 +234,14 @@ section.about .container .read-more:hover {
 }
 
 /* PROJECTS */
-section.projects {
-  /* background: color???; */
-}
-
 section.projects .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+section.projects .container a {
+  display: block;
 }
 
 section.projects .container .project {
@@ -297,7 +289,6 @@ section.contact .container {
 }
 
 section.contact .container h1 {
-  /* text-align: center; */
   margin: 0;
   color: var(--primary--color--retro);
 }
@@ -404,7 +395,6 @@ footer .copyright {
     width: 16rem;
     height: 100vh;
     background: var(--accent--color--blue);
-    box-shadow: 1rem 0 2rem var(--primary--color--orange);
     display: none;
   }
 
@@ -441,6 +431,7 @@ footer .copyright {
     padding-bottom: 7rem;
     max-width: 100vw;
     overflow-x: hidden;
+    height: 60vh;
   }
 
   section.main .container {
@@ -457,6 +448,7 @@ footer .copyright {
 
   section.main .container .intro h1 {
     text-align: center;
+    margin-top: 2rem;
   }
 
   section.main .container .intro p {
@@ -471,8 +463,8 @@ footer .copyright {
   }
 
   section.main .container .pic {
-    width: 10rem;
-    height: 10rem;
+    width: 16rem;
+    height: 16rem;
   }
 
   /* EXPERIENCE MEDIA QUERIES*/
