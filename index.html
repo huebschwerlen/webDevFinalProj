@@ -9,7 +9,8 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="./src/styles/style.css">
 
-
+    <!-- ICONS CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
 
     <!-- ICONSCOUT -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -20,12 +21,22 @@
     <!-- NAV BAR -->
     <nav>
         <div class="container">
+            <a href="#">
+                <h3>Sam Huebschwerlen</h3>
+            </a>
             <ul>
+                <li><a href="#" class="active">Main</a></li>
                 <li><a href="#main">About</a></li>
                 <li><a href="#about">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button>
+                <span class="material-icons-sharp">Menu</span>
+            </button>
+            <button>
+                <span class="material-icons-sharp">Close</span>
+            </button>
         </div>
     </nav>
     <!-- END NAV -->
@@ -35,11 +46,11 @@
         <div class="container">
             <div class="intro">
                 <h1>Hello!</h1>
-                <h2>My name is Sam :)</h2>
-                <h3>
+                <h3>My name is Sam :)</h3>
+                <p>
                     I am a Computer Science Grad Student Focused
                     On Software Engineering, FullStack Web Development, & CyberSecurity.
-                </h3>
+                </p>
             </div>
             <div class="pic-container">
                 <div class="pic">
@@ -165,20 +176,28 @@
                 <h1>I'd Love To Hear From You!</h1>
                 <p>
                     If you're looking for a motivated software engineer,
-                    or you just want to shoot the breeze fill out the form
+                    or you just want to shoot the breeze, just fill out the form
                     below and I will get back to you as soon as possible!
                 </p>
-                <form action="">
+                <form action="" method="">
                     <input type="text" name="Name" placeholder="Name" required>
                     <input type="email" name="Email" placeholder="Email" required>
                     <input type="text" name="Subject" placeholder="Subject" required>
-                    <textarea name="Message" id="" placeholder="Message" required></textarea>
+                    <textarea name="Message" placeholder="Message" required></textarea>
                     <input type="submit" value="Submit" class="btn btn-primary">
                 </form>
             </div>
         </div>
     </section>
     <!-- END CONTACT FORM -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="copyright">Copyright &copy Sam Huebschwerlen</div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- SCRIPTS -->
     <script src="./src/scripts/scripts.js"></script>
 </body>
 

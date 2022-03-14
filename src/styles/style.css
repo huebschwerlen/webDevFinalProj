@@ -26,6 +26,9 @@
   /* Accent Color : 10% */
   --accent--color--red: #f05023;
   --accent--color--blue: #3ebdd8;
+
+  /* Transition */
+  --transition: all 800ms ease;
 }
 
 html {
@@ -48,9 +51,7 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
   /* color: */
   line-height: 1.2;
 }
@@ -78,7 +79,7 @@ img {
 section {
   padding: 10rem 0 7rem;
   max-width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 section h1 {
@@ -92,12 +93,25 @@ section h1 {
   font-size: 1.1rem;
   display: inline-block;
   margin: 2rem 0;
+  color: var(--secondary--color--green);
+  background-color: var(--primary--color--retro);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  /* color light, low transparency */
+  box-shadow: 0 2rem 2rem var(--primary--color--orange);
+}
+
+.btn-primary {
+  background: var(--primary--color--orange);
+  color: var(--primary--color--white);
 }
 
 /* NAV */
 nav {
   background-color: var(--primary--color--orange);
-  border-bottom: 1px dashed var(--secondary--color--green);
+  border-bottom: 2px dotted var(--secondary--color--green);
   display: flex;
   width: 100%;
   height: 6rem;
@@ -126,13 +140,26 @@ nav .container ul li a {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: var(--secondary--color--green);
+  color: var(--primary--color--retro);
   width: 8rem;
-  transition: all 800ms ease;
+  transition: var(--transition);
 }
 
 nav .container ul li a:hover {
-  color: var(--primary--color--retro);
+  color: var(--primary--color--orange);
+}
+
+nav .container ul li a.active {
+  background-color: var(--primary--color--retro);
+  color: var(--primary--color--orange);
+}
+
+nav button {
+  display: none;
+}
+
+nav h3 {
+  color: var(--primary--color--orange);
 }
 
 /* Main */
@@ -146,7 +173,8 @@ section.main {
 
 section.main .container {
   display: grid;
-  grid-template-columns: 30rem 30rem;
+  /* grid-template-columns: 30rem 30rem; */
+  grid-template-columns: auto 30rem;
   gap: 3rem;
 }
 
@@ -155,11 +183,11 @@ section.main .intro h1 {
   margin: 0;
 }
 
-section.main .intro h2 {
-  margin: 1rem 0 1rem;
+section.main .intro h3 {
+  margin: 2.5rem 0 1rem;
 }
 
-section.main .intro h3 {
+section.main .intro p {
   width: 35rem;
 }
 
@@ -170,6 +198,7 @@ section.main .pic-container {
 }
 
 section.main .pic-container .pic {
+  /* postion may not be correct or neccesary */
   position: absolute;
   width: 20rem;
   height: 20rem;
@@ -203,7 +232,7 @@ section.about .container .more-info.show-content {
 section.about .container .read-more {
   display: block;
   margin: 1rem 0 2rem;
-  /* color: primary color */
+  color: var(--accent--color--blue);
   cursor: pointer;
 }
 
@@ -223,14 +252,14 @@ section.projects .container {
 }
 
 section.projects .container .project {
-  background: white;
-  padding: 3rem 2rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   cursor: default;
-  transition: all 800ms ease;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: white;
+  transition: var(--transition);
 }
 
 section.projects .container .project:hover {
@@ -244,13 +273,15 @@ section.projects .container .project img {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--secondary--color--green);
+  border: 1px solid var(--accent--color--blue);
 }
 
 /* CONTACT */
 section.contact {
   padding: 0;
   max-width: 100vw;
+  background: url(https://wallpaperaccess.com/full/1745604.jpg) no-repeat center
+    center/cover;
 }
 
 section.contact .background {
@@ -265,16 +296,16 @@ section.contact .container {
 }
 
 section.contact .container h1 {
-  text-align: center;
+  /* text-align: center; */
   margin: 0;
-  color: var(--primary--color--white);
+  color: var(--primary--color--retro);
 }
 
 section.contact .container p {
   text-align: center;
-  color: var(--primary--color--white);
-  opacity: 0.8;
   margin-top: 0.5rem;
+  color: var(--primary--color--retro);
+  opacity: 0.9;
 }
 
 section.contact form {
@@ -287,13 +318,19 @@ section.contact form textarea {
   width: 100%;
   margin: 0.5rem 0;
   padding: 1.6rem;
-  border: 1px solid var(--primary--color--white);
+  border: 1px solid var(--primary--color--retro);
   background: transparent;
   color: var(--primary--color--retro);
 }
 
 section.contact form textarea {
   height: 10rem;
+}
+
+section.contact form input:focus,
+section.contact form textarea:focus {
+  background-color: var(--primary--color--retro);
+  color: var(--secondary--color--green);
 }
 
 section.contact form input::placeholder,
@@ -315,6 +352,22 @@ section.contact form .btn:hover {
   color: var(--secondary--color--green);
 }
 
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+}
+
+footer .copyright {
+  background: var(--primary--color--orange);
+  color: var(--primary--color--retro);
+  text-align: center;
+  margin-top: 5rem;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
 /* MEDIA QUERIES */
 
 /* PHONE */
@@ -330,8 +383,51 @@ section.contact form .btn:hover {
   }
 
   /* NAV */
-  /* collapsible? */
-  /* find hamburger icon */
+  nav {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  nav h3 {
+    margin-left: 1rem;
+  }
+
+  nav .container {
+    width: 100%;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    z-index: 3;
+    width: 16rem;
+    height: 100vh;
+    background: var(--primary--color--retro);
+    box-shadow: 1rem 0 2rem var(--primary--color--orange);
+  }
+
+  nav ul li {
+    height: 4.6rem;
+    width: 100%;
+  }
+
+  nav .container ul li a {
+    width: 100;
+    justify-content: start;
+    padding-left: 2rem;
+  }
+
+  nav .container ul li a:hover {
+    padding-left: 3rem;
+  }
+
+  nav button {
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    color: var(--secondary--color--green);
+    margin: 1rem;
+  }
 
   /* #MAIN / ABOUT */
 
