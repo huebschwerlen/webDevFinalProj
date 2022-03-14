@@ -257,7 +257,8 @@ section.projects .container .project {
 }
 
 section.projects .container .project:hover {
-  box-shadow: 0 3rem 3rem lightblue;
+  box-shadow: 0 2rem 2rem var(--secondary--color--green);
+  cursor: pointer;
 }
 
 section.projects .container .project img {
