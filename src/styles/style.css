@@ -147,7 +147,7 @@ nav .container ul li a {
 }
 
 nav .container ul li a:hover {
-  color: var(--primary--color--orange);
+  color: var(--secondary--color--green);
 }
 
 nav .container ul li a.active {
@@ -372,7 +372,7 @@ footer .copyright {
 /* MEDIA QUERIES */
 
 /* PHONE */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   h1 {
     font-size: 2.2rem;
   }
